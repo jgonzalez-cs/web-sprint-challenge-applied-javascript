@@ -20,14 +20,14 @@ function Header() {
     date.innerHTML = "MARCH 28, 2020";
 
     const heading = document.createElement("h1");
-    heading.innerHTML = "Lambda Times"
+    heading.innerHTML = "Lambda Times";
 
     const temp = document.createElement("span");
-    temp.innerHTML = "98°"
+    temp.innerHTML = "98°";
 
-    header.appendChild(date) // append elements to header
-    header.appendChild(heading)
-    header.appendChild(temp)
+    header.appendChild(date); // append elements to header
+    header.appendChild(heading);
+    header.appendChild(temp);
 
     return header; // return the header
 }
