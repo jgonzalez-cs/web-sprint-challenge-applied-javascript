@@ -21,18 +21,43 @@
 //
 // Use your function to create a card for each of the articles, and append each card to the DOM.
 
-axios.get("https://lambda-times-api.herokuapp.com/articles")
-    .then(futureData => {
-        console.log(futureData.data.articles.javascript)
-        // cardMaker(futureData.)
-    })
+// axios.get("https://lambda-times-api.herokuapp.com/articles")
+//     .then(futureData => {
+//         // console.log(futureData.data.articles.javascript)
+//         cardMaker(futureData.)
+//     })
 
 
-// function cardMaker(articleObj) {
-//     const card = document.createElement("div");
-//     card.classList.add("card")
+function cardMaker(/*articleObj*/) {
+    const card = document.createElement("div");
+    card.classList.add("card")
 
-//     const title = document.createElement("div");
-//     title.classList.add("headline");
+    const title = document.createElement("div");
+    title.classList.add("headline");
+    title.innerHTML = "Welcome to Dead House"
 
-// }
+    const authorDiv = document.createElement("div");
+    authorDiv.classList.add("author");
+
+    const authorImg = document.createElement("div");
+    authorImg.classList.add("img-container");
+
+    const img = document.createElement("img");
+    img.src = "https://pm1.narvii.com/6968/b3f51a2bf74791324f2fb906950c3911683303ffr1-200-204v2_128.jpg"
+
+    const name = document.createElement("span");
+    name.innerHTML = "By R.L. Stine"
+
+    card.appendChild(title);
+    card.appendChild(authorDiv);
+
+    authorDiv.appendChild(authorImg);
+    authorDiv.appendChild(name);
+
+    authorImg.appendChild(img);
+
+    return card;
+}
+
+const stine = cardMaker();
+document.body.appendChild(stine);
