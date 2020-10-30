@@ -37,10 +37,7 @@ function cardMaker(articleObj) {
 
     return card;
 }
-// const stine = cardMaker();
-// document.body.appendChild(stine);
-
-// <div class="card"> DONE
+// <div class="card">
 //   <div class="headline">{Headline of article}</div>
 //   <div class="author">
 //     <div class="img-container">
@@ -75,4 +72,14 @@ axios.get("https://lambda-times-api.herokuapp.com/articles")
             var newCard = cardMaker(str);
             document.body.appendChild(newCard);
         })
+        const click = document.querySelector(".card")
+        const headline = document.querySelector(".headline")
+
+        click.addEventListener("click", function(event) {
+            console.log(headline)
+        })
+        // click.addEventListener("click", function(event) {
+        //     var headline = querySelectorAll(".headline")
+        //     console.log(headline)
+        // })
     })
