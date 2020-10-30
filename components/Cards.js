@@ -7,7 +7,7 @@
 //
 // Write a function that takes a single article object and returns the following markup:
 //
-// <div class="card">
+// <div class="card"> DONE
 //   <div class="headline">{Headline of article}</div>
 //   <div class="author">
 //     <div class="img-container">
@@ -20,3 +20,19 @@
 // Add a listener for click events so that when a user clicks on a card, the headline of the article is logged to the console.
 //
 // Use your function to create a card for each of the articles, and append each card to the DOM.
+
+axios.get("https://lambda-times-api.herokuapp.com/articles")
+    .then(futureData => {
+        console.log(futureData.data.articles.javascript)
+        // cardMaker(futureData.)
+    })
+
+
+// function cardMaker(articleObj) {
+//     const card = document.createElement("div");
+//     card.classList.add("card")
+
+//     const title = document.createElement("div");
+//     title.classList.add("headline");
+
+// }
